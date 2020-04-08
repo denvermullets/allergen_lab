@@ -4,7 +4,7 @@ class CreateRecipe < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :description
 
-      t.integer :user_id
+      t.belongs_to :user
     end
   end
 end
