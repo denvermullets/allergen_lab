@@ -24,6 +24,6 @@ In this project, we will be practicing object relationships in Rails. We will be
 - Add [bootstrap for styling](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
 
 
+### `My notes:`
 
-a user can have many recipes
-a recipe can have 1 user (make user_id column in recipes)
+![Database structure](https://i.imgur.com/zRuelbZ.png)
