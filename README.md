@@ -26,4 +26,6 @@ In this project, we will be practicing object relationships in Rails. We will be
 
 ### `My notes:`
 
+Current DB table structure:
+
 ![Database structure](https://i.imgur.com/zRuelbZ.png)
