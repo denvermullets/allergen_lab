@@ -1,0 +1,15 @@
+<h1><%= @recipe.name %></h1>
+
+<h2>Instructions:</h2>
+<p><%= @recipe.description %></p>
+
+<h2>Ingredients:</h2>
+<ul>
+    <% @recipe.recipe_ingredients.each do |ingredient| %>
+        <li><%= "#{ingredient.measurement_portion.portions}#{ingredient.measurement_unit.desc} #{ingredient.ingredient.name}"%></li>
+    <% end %>
+
+</ul>
+
+
+<%= link_to "Recipe created by #{@recipe.user.name}", user_path(@recipe.user) %>

@@ -1,0 +1,7 @@
+<h1>Current List of Users:</h1>
+
+<ol>
+    <% @users.each do |user| %>
+        <li><%= link_to user.name, user_path(user) %></li>
+    <% end %>
+</ol>

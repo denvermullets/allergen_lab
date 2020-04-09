@@ -1,0 +1,13 @@
+<h1>Profile for <%=@user.name%></h1>
+<h3>Bio:</h3>
+<p><%= @user.bio %></p>
+
+<h2>List of recipes <%=@user.name%> has created: </h2>
+
+<ol>
+    <% @user.recipes.each do |recipe| %>
+        <li>
+            <%= link_to recipe.name, recipe_path(recipe) %>
+        </li>
+    <% end %>
+</ol>
