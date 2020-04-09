@@ -4,7 +4,7 @@ class CreateRecipeIngredient < ActiveRecord::Migration[6.0]
       t.belongs_to :recipe
       t.belongs_to :ingredient
       t.belongs_to :measurement_unit
-      t.belongs_to :measurement_quantity
+      t.belongs_to :measurement_portion
 
     end
   end

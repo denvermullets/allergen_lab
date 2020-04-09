@@ -15,14 +15,16 @@ ActiveRecord::Schema.define(version: 2020_04_08_152614) do
   create_table "allergens", force: :cascade do |t|
     t.integer "user_id"
     t.integer "ingredient_id"
+    t.index ["ingredient_id"], name: "index_allergens_on_ingredient_id"
+    t.index ["user_id"], name: "index_allergens_on_user_id"
   end
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
   end
 
-  create_table "measurement_quantities", force: :cascade do |t|
-    t.integer "quantity"
+  create_table "measurement_portions", force: :cascade do |t|
+    t.integer "portions"
   end
 
   create_table "measurement_units", force: :cascade do |t|
@@ -33,9 +35,9 @@ ActiveRecord::Schema.define(version: 2020_04_08_152614) do
     t.integer "recipe_id"
     t.integer "ingredient_id"
     t.integer "measurement_unit_id"
-    t.integer "measurement_qty_id"
+    t.integer "measurement_portion_id"
     t.index ["ingredient_id"], name: "index_recipe_ingredients_on_ingredient_id"
-    t.index ["measurement_qty_id"], name: "index_recipe_ingredients_on_measurement_qty_id"
+    t.index ["measurement_portion_id"], name: "index_recipe_ingredients_on_measurement_portion_id"
     t.index ["measurement_unit_id"], name: "index_recipe_ingredients_on_measurement_unit_id"
     t.index ["recipe_id"], name: "index_recipe_ingredients_on_recipe_id"
   end
